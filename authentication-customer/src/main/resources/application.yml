@@ -1,12 +1,8 @@
+server:
+  port: 9898
+
 spring:
   application:
     name: AUTHENTICATION-CUSTOMER
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-
-
-server:
-  port: 9898
+  config:
+    import: optional:configserver:http://localhost:8090
